@@ -644,7 +644,7 @@ document.addEventListener('click', e => {
 // Folder names are matched against these ids case-insensitively.
 const GX_VERSION_GROUPS = [
     { label: 'Release', ids: [
-        '26.1.2-wasm' '1.21.11-wasm' '1.17.1-wasm' '1.16.5-wasm' '1.14-wasm' '1.13.2-wasm' '1.12.2-wasm', '1.12.2', '1.8.8-wasm', '1.8.8', '1.7.10', '1.6.4',
+        '26.1.2-wasm', '1.21.11-wasm', '1.17.1-wasm', '1.16.5-wasm', '1.14.4-wasm', '1.13.2-wasm', '1.12.2-wasm', '1.12.2', '1.8.8-wasm', '1.8.8', '1.7.10', '1.6.4',
         '1.5.2', '1.4.7-wasm', '1.3.2', '1.2.5-wasm', '1.2.5', '1.1', '1.0'
     ]},
     { label: 'Beta', ids: [
@@ -783,7 +783,7 @@ async function _fetchHtmlOnly(folderName, entry) {
 // ===== LAUNCH LOGIC =====
 async function playGame() {
     if (!_selectedGame) { showToast('Select a game first.', true); return; }
-    const method = getCookie('launchMethod') || 'regular';
+    const method = getCookie('launchMethod') || 'blob';
     const popupFeatures = 'width=1280,height=720,toolbar=0,menubar=0,location=0,status=0';
 
     setStatus('RESOLVING GAME FILES...');
@@ -985,7 +985,7 @@ function _showDataUriSplash(copied) {
 
 // ===== SETTINGS PAGE ACTIONS =====
 function updateModeBadge() {
-    const method = getCookie('launchMethod') || 'regular';
+    const method = getCookie('launchMethod') || 'blob';
     const badge = document.getElementById('mode-badge-text');
     if (badge) badge.textContent = GX_MODE_LABELS[method] || method.toUpperCase();
 }
@@ -1040,7 +1040,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     applyTheme(getCookie('launcherTheme') || 'default');
 
-    const savedMode = getCookie('launchMethod') || 'regular';
+    const savedMode = getCookie('launchMethod') || 'blob';
     document.querySelectorAll('.mode-card').forEach(c => {
         c.classList.toggle('selected', c.dataset.mode === savedMode);
     });
