@@ -341,7 +341,7 @@ nav::-webkit-scrollbar-thumb { background: var(--border2); }
 <div class="launcher">
 
   <div class="title-bar">
-    <div class="title-logo"><div class="title-dot"></div>GX-LAUNCHER <span class="ver">V2.0</span></div>
+    <div class="title-logo"><div class="title-dot"></div>GX-LAUNCHER <span class="ver">V2.3</span></div>
   </div>
 
   <div class="content">
@@ -644,17 +644,17 @@ document.addEventListener('click', e => {
 // Folder names are matched against these ids case-insensitively.
 const GX_VERSION_GROUPS = [
     { label: 'Release', ids: [
-        '26.2-wasm', '26.1.2-wasm', '1.21.11-wasm', '1.20.6-wasm', '1.17.1-wasm', '1.16.5-wasm', '1.16.5',
+        '26.3-wasm', '26.2-wasm', '26.1.2-wasm', '1.21.11-wasm', '1.20.6-wasm', '1.17.1-wasm', '1.16.5-wasm', '1.16.5',
         '1.14.4-wasm', '1.14.4', '1.13.2-wasm', '1.13.2', '1.12.2-wasm', '1.12.2', '1.8.8-wasm', '1.8.8',
         '1.7.10-wasm', '1.7.10', '1.6.4', '1.5.2', '1.4.7-wasm', '1.4.7', '1.3.2-wasm', '1.2.5-wasm', '1.2.5',
-        '1.2.3-wasm', '1.2.3', '1.1', '1.0'
+        '1.2.3-wasm', '1.2.3', '1.1', '1.0-wasm', '1.0'
     ]},
     { label: 'Beta', ids: [
         'beta-1.9-wasm', 'beta-1.9', 'beta-1.8.1-wasm', 'beta-1.8.1', 'beta-1.7.3', 'beta-1.6.4', 'beta-1.5',
         'beta-1.4', 'beta-1.3-wasm', 'beta-1.3', 'beta-1.2', 'beta-1.1', 'beta-1.0.2', 'beta-1.0'
     ]},
     { label: 'Alpha - Pre-Classic', ids: [
-        'alpha-1.2.6', 'alpha-1.1.2_01', 'alpha-1.0.6_03', 'alpha-1.0.4', 'alpha-1.0.1_01',
+        'alpha-1.2.6-wasm', 'alpha-1.2.6', 'alpha-1.1.2_01', 'alpha-1.0.6_03', 'alpha-1.0.4', 'alpha-1.0.1_01',
         'alpha-1.0.16_02-wasm', 'infdev-wasm', 'indev', 'indev-20100223-wasm', 'indev-20100219-wasm', '4k',
         'classic-0.3.0-wasm',
         'classic-0.0.25a-05-wasm', 'classic-0.0.24a-03-wasm', 'classic-0.0.23a-01-wasm', 'classic-0.0.22a-05-wasm',
@@ -665,8 +665,8 @@ const GX_VERSION_GROUPS = [
         'pre-classic-rd-132328-wasm', 'pre-classic-rd-132211-wasm', 'pre-classic-rd-131655-wasm'
     ]},
     { label: 'Clients', ids: [
-        'gx-client', 'modern client', 'reflex client', 'astra client', 'astra client 2-1.8.8', 'eb client', 'eb client 1.8.8',
-        'eb client 1.14.4', 'aero client', 'eclipse client', 'huzzium client', 'kozmo client', 'myven client',
+        'gx-client', 'modern client', 'astra client', 'astra client 2-1.8.8', 'eb client', 'eb client 1.8.8',
+        'eb client 1.14.4', 'aero client', 'eclipse client', 'huzzium client', 'eaglet', 'kozmo client', 'myven client',
         'pixel client', 'precision client', 'resent client', 'tuff client', 'tuff client beta',
         'the broken script 1.8.8', 'shadow network', 'larp client 1.12.2', 'larp client 1.14.4',
         'forge 1.6.4', 'eaglerforge', 'efi-1.8.8', 'efi-1.12.2'
